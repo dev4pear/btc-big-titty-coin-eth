@@ -24,9 +24,29 @@
 
   // CA intentionally not published — keep copy disabled
   const copyBtn = document.getElementById("copy-ca");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", (e) => {
-      e.preventDefault();
+  const caDisplay = document.getElementById("ca-display");
+  if (copyBtn && caDisplay) {
+    copyBtn.addEventListener("click", async () => {
+      const ca = caDisplay.textContent.trim();
+      if (!ca || ca === "CA Coming Soon") return;
+      try {
+        await navigator.clipboard.writeText(ca);
+        const label = copyBtn.querySelector("span");
+        if (label) {
+          const prev = label.textContent;
+          label.textContent = "Copied!";
+          setTimeout(() => { label.textContent = prev; }, 1500);
+        }
+      } catch {
+        // fallback for older browsers
+        const range = document.createRange();
+        range.selectNodeContents(caDisplay);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        document.execCommand("copy");
+        sel.removeAllRanges();
+      }
     });
   }
 })();
