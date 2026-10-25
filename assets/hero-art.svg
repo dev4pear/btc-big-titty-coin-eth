@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" fill="none">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F7931A" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#F7931A" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0A0A0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="100%" stop-color="#F7931A"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="900" fill="url(#g)"/>
+  <circle cx="400" cy="380" r="210" stroke="url(#ring)" stroke-width="18" opacity="0.9"/>
+  <circle cx="400" cy="380" r="150" fill="#F7931A"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="180" font-weight="700" fill="#0A0A0B">₿</text>
+  <text x="400" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#F7931A" letter-spacing="8">$BTC</text>
+  <text x="400" y="730" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#C9A88A" letter-spacing="4">ETHEREUM</text>
+</svg>
