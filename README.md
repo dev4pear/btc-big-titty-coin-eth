@@ -23,7 +23,7 @@ python3 -m http.server 8765
 | Control | URL |
 |---|---|
 | Twitter / X (header, hero, community, footer, mobile) | https://x.com |
-| Buy Now / Buy on Uniswap | https://app.uniswap.org |
+| Buy Now / Buy on Uniswap | https://app.uniswap.org/swap?chain=mainnet&inputCurrency=ETH&outputCurrency=0xcomingsoon |
 
 ## Contract address
 
